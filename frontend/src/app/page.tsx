@@ -9,10 +9,10 @@ export default function Home() {
         <div className="flex flex-col ml-1 mt-[10vh] sm:ml-[25vw] sm:mt-[50vh] justify-start items-start">
           <p className="text-5xl font-medium">Hi I'm</p>
           <p className="text-7xl font-semibold">Elvis Mboya</p>
-          <p className="bg-slate-200 px-2 mt-3 text-xl font-semibold text-black rounded-full w-64 cursor-pointer">Software Developer</p>
-          <p className="bg-slate-200 px-2 mt-3 text-xl font-semibold text-black rounded-full w-64 cursor-pointer">Graphics Designer</p>
-          <p className="bg-slate-200 px-2 mt-3 text-xl font-semibold text-black rounded-full w-64 cursor-pointer">Web Designer</p>
-          <p className="bg-slate-200 px-2 mt-3 text-xl font-semibold text-black rounded-full w-64 cursor-pointer">Paint & Pencil Artist</p>
+          <p className="bg-[#F7FBE6] px-2 mt-3 text-xl font-semibold text-black rounded-full w-64 cursor-pointer">Software Developer</p>
+          <p className="bg-[#F7FBE6] px-2 mt-3 text-xl font-semibold text-black rounded-full w-64 cursor-pointer">Graphics Designer</p>
+          <p className="bg-[#F7FBE6] px-2 mt-3 text-xl font-semibold text-black rounded-full w-64 cursor-pointer">Web Designer</p>
+          <p className="bg-[#F7FBE6] px-2 mt-3 text-xl font-semibold text-black rounded-full w-64 cursor-pointer">Paint & Pencil Artist</p>
           <button className="bg-[#CCFF00] mt-[30px] hover:bg-[#20479b] hover:text-slate-300 text-[17px] text-black font-bold py-1 px-2 rounded-md">
             Download Resume
           </button>

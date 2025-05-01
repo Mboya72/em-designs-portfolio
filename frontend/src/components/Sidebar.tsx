@@ -23,7 +23,7 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`h-screen bg-black bg-opacity-20 backdrop-blur-sm text-white font-medium p-3 transition-all duration-300 ease-in-out ${
+      className={`h-screen  bg-opacity-20 backdrop-blur-[70px] text-white font-medium p-3 transition-all duration-300 ease-in-out ${
         isOpen ? "w-[200px]" : "w-[60px]"
       } fixed top-0 right-0 z-50`}
     >
@@ -43,7 +43,7 @@ const Sidebar = () => {
             <Link href={item.route} key={index}>
               <div
                 className={`flex items-center gap-10 cursor-pointer text-[18px] transition-colors duration-200 ${
-                  isActive ? "text-[#AFDB00]" : "text-[#6C757D] hover:text-[#AFDB00]"
+                  isActive ? "text-[#AFDB00]" : "text-[#F7FBE6] hover:text-[#AFDB00]"
                 }`}
                 onClick={() => setIsOpen(false)}
               >

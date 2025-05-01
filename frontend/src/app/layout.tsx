@@ -26,10 +26,10 @@ export default function RootLayout({
 
         {/* Top Bar: fixed but *under* sidebar */}
         <div className="fixed top-0 left-0 w-full z-40 border-b border-b-[#6C757D] h-[50px] flex items-center pr-[60px]">
-          <div className="h-[51px] w-[51px] bg-slate-900 border-b border-b-[#ccff00] flex items-center justify-center">
+          <div className="h-[51px] w-[51px]  border-b border-b-[#ccff00] flex items-center justify-center">
             <img src="/em web logo.png" alt="Logo" className="h-[40px] w-auto" />
           </div>
-          <p className={`mx-auto text-2xl font-bold ${breakFont.className}`}>EM DESIGNS</p>
+          <p className={`mx-auto  text-[#F7FBE6] text-2xl font-bold ${breakFont.className}`}>EM DESIGNS</p>
         </div>
 
         {/* Page content */}

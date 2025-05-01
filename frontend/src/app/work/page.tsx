@@ -38,7 +38,7 @@ export default function WorksPage() {
 
       <div className="mt-15 ml-[13vw]">
         <div className="flex flex-row mb-3 items-center">
-          <h1 className={`text-9xl ${afacad.className}`}>
+          <h1 className={`text-9xl text-[#F7FBE6] ${afacad.className}`}>
             My <span className="text-[#CCFF00]">Works</span>
           </h1>
           <img src="brick.png" alt="" className="h-[70px]" />
