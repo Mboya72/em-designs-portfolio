@@ -8,8 +8,8 @@ export default function Home() {
       {/* Rest of the homepage content */}
       <div className="flex items-center">
         <div className="flex flex-col ml-1 mt-[30vh] sm:ml-[25vw] sm:mt-[50vh] justify-start items-start">
-          <p className="text-5xl font-medium">Hi I&apos;m</p>
-          <p className="text-6xl sm:text-7xl mb-5 font-semibold">Elvis Mboya</p>
+          <p className="text-5xl text-[#F7FBE6] font-medium">Hi I&apos;m</p>
+          <p className="text-6xl sm:text-7xl text-[#F7FBE6] mb-5 font-semibold">Elvis Mboya</p>
           <p className="bg-[#F7FBE6] px-2 mt-3 text-xl font-semibold text-black rounded-full w-64 cursor-pointer">Software Developer</p>
           <p className="bg-[#F7FBE6] px-2 mt-3 text-xl font-semibold text-black rounded-full w-64 cursor-pointer">Graphics Designer</p>
           <p className="bg-[#F7FBE6] px-2 mt-3 text-xl font-semibold text-black rounded-full w-64 cursor-pointer">Web Designer</p>
