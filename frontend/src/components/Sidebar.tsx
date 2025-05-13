@@ -6,6 +6,7 @@ import { IoHome, IoGameController } from "react-icons/io5";
 import { FaFaceGrinBeam, FaBriefcase, FaPaintRoller } from "react-icons/fa6";
 import { MdCall } from "react-icons/md";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { GiCoffeeCup } from "react-icons/gi";
 
 // Sidebar items with their respective routes
 const sidebarItems = [
@@ -15,6 +16,7 @@ const sidebarItems = [
   { icon: <MdCall />, label: "Contact", route: "/contact" },
   { icon: <FaPaintRoller />, label: "Design", route: "/design" },
   { icon: <IoGameController />, label: "Games", route: "/games" },
+  { icon: <GiCoffeeCup />, label: "Coffee", route: "/coffee" },
 ];
 
 const Sidebar = () => {
@@ -35,7 +37,7 @@ const Sidebar = () => {
       </div>
 
       {/* Sidebar Links */}
-      <div className="mt-[25vh] flex flex-col gap-15 items-start">
+      <div className="mt-[15vh] lg:mt-[20vh] flex flex-col gap-15 items-start">
         {sidebarItems.map((item, index) => {
           const isActive = pathname === item.route;
 
