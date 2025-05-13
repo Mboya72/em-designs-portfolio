@@ -12,7 +12,7 @@ export default function WorksPage() {
   const [fullscreenImage, setFullscreenImage] = useState<string | null>(null);
 
   return (
-    <div className="flex flex-row h-[100vh]  max-w-[100vw] bg-[url(/aboutback.png)] bg-cover bg-no-repeat relative">
+    <div className="min-h-screen bg-[url(/aboutback.png)] bg-cover bg-no-repeat px-4 lg:px-[13vw] pb-12 pt-12 lg:pt-20">
       {/* Fullscreen Image Modal */}
       {fullscreenImage && (
         <div
@@ -22,149 +22,132 @@ export default function WorksPage() {
           <img
             src={fullscreenImage}
             alt="fullscreen view"
-            className="max-w-full max-h-full rounded-lg"
+            className="max-w-full max-h- rounded-lg"
           />
         </div>
       )}
 
-      {/* Main Content */}
-      <div>
-        <img
-          src="workman.png"
-          alt="man"
-          className="h-[500px] absolute bottom-0"
-        />
+      {/* Header */}
+      <div className="flex flex-col lg:flex-row items-center mb-10 gap-4">
+        <h1 className={`text-5xl lg:text-9xl ${afacad.className}`}>
+          My <span className="text-[#CCFF00]">Works</span>
+        </h1>
+        <img src="brick.png" alt="brick" className="h-[100px] lg:h-[100px]" />
       </div>
 
-      <div className="mt-15 ml-[13vw]">
-        <div className="flex flex-row mb-3 items-center">
-          <h1 className={`text-9xl text-[#F7FBE6] ${afacad.className}`}>
-            My <span className="text-[#CCFF00]">Works</span>
-          </h1>
-          <img src="brick.png" alt="" className="h-[70px]" />
+      {/* Content Sections */}
+      <div className="flex flex-col lg:flex-row gap-6">
+        {/* Motion Design */}
+        <div className="sm:w-full  w-[330px] bg-[#CCFF00] rounded-xl sm:mr-0 mr-12 sm:p-4 flex flex-col items-center gap-4">
+          <p className={`text-black text-4xl lg:text-6xl font-bold ${afacad.className}`}>
+            Motion Design
+          </p>
+          <video
+            src="/Main Animation.mp4"
+            controls
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="rounded-lg sm:w-full w-[300px] max-w-[400px]"
+          />
+          <video
+            src="/main_1.mp4"
+            controls
+            muted
+            loop
+            autoPlay
+            playsInline
+            className="rounded-lg sm:w-full w-[300px] max-w-[400px]"
+          />
+          <p className="text-black text-[16px] text-center font-semibold">
+            "Motion design is where storytelling and technology meet."
+          </p>
+          <FaArrowCircleRight className="fill-black text-xl mr-2 mb-2 hover:drop-shadow-lg self-end" />
         </div>
 
-        <div className="flex flex-row w-[75vw] gap-5 h-[665px]">
-          {/* Motion Design */}
-          <div className="w-[530px] rounded-xl bg-[#CCFF00] flex gap-3 flex-col items-center mx-auto p-4">
-            <p
-              className={`text-black ml-3 mb-2 font-bold ${afacad.className} text-6xl`}
-            >
-              Motion Design
-            </p>
-            <video
-              src="/Main Animation.mp4"
-              width="400"
-              controls
-              autoPlay
-              className="rounded-lg"
-            />
-            <video
-              src="/main_1.mp4"
-              width="400"
-              controls
-              autoPlay
-              className="rounded-lg"
-            />
-            <p className="text-black text-[17px] font-semibold">
-              "Motion design is where storytelling and technology meet."
-            </p>
-            <FaArrowCircleRight className="fill-black place-self-end text-[20px] hover:drop-shadow-lg" />
-          </div>
-
-          {/* Graphic Design & Others */}
-          <div className="w-[530px] h-[700px]">
-            <div className="h-[300px] rounded-xl flex bg-[#CC5144] p-4">
-              <div>
-                <img
-                  src="Emma.png"
-                  alt="Emma"
-                  className="h-[27vh] cursor-pointer rounded-sm border border-slate-700 shadow-2xl"
-                  onClick={() => setFullscreenImage("Emma.png")}
-                />
-              </div>
-              <div>
-                <div>
-                  <p
-                    className={`text-[#CCFF00] text-[80px] h-[75px] font-bold ${afacad.className} ml-2`}
-                  >
-                    Graphic
-                  </p>
-                  <p
-                    className={`text-black h-[100px] text-[80px] font-bold ${afacad.className} ml-2`}
-                  >
-                    Design
-                  </p>
-                </div>
-                <p
-                  className={`text-black text-[17px] font-semibold mb-2 ml-2`}
-                >
-                  “Design is intelligence made visible.”
-                </p>
-                <FaArrowCircleRight className="fill-black mt-5 text-[20px] place-self-end hover:drop-shadow-lg float-right" />
-              </div>
-            </div>
-            <div className="flex mt-5 gap-5 h-[330px] flex-row">
-              <div className="w-[255px] rounded-xl bg-[#0198FC] p-4">
-                <p
-                  className={`text-black text-6xl font-bold ${afacad.className}`}
-                >
-                  Art Works
-                </p>
-                <FaArrowCircleRight className="fill-black mt-5 text-[20px] place-self-end hover:drop-shadow-lg float-right" />
-                <img
-                  src="art1.jpg"
-                  alt="Artwork"
-                  className="h-45 border-2 border-[#FCBC04] rounded-md cursor-pointer"
-                  onClick={() => setFullscreenImage("art1.jpg")}
-                />
-              </div>
-              <div className="w-[255px] rounded-xl bg-[#FCBC04] p-4">
-                <p
-                  className={`text-black text-6xl font-bold ${afacad.className}`}
-                >
-                  Mobile UI Design
-                </p>
-                <FaArrowCircleRight className="fill-black mt-5 text-[20px] place-self-end hover:drop-shadow-lg float-right" />
-                <img
-                  src="32mobile.png"
-                  alt="Mobile UI"
-                  className="h-50 rounded-md cursor-pointer"
-                  onClick={() => setFullscreenImage("32mobile.png")}
-                />
-              </div>
+        {/* Graphic Design & Others */}
+        <div className="w-full lg:w-[530px] flex flex-col gap-6">
+          {/* Graphic Design Card */}
+          <div className="bg-[#CC5144] p-4 rounded-xl flex flex-col sm:flex-row sm:mr-0 mr-12 gap-4">
+          <img
+  src="Emma.png"
+  alt="Emma"
+  className="w-full max-w[300] sm:max-w-[180px] h-auto rounded-md border border-slate-700 shadow-lg cursor-pointer"
+  onClick={() => setFullscreenImage("Emma.png")}
+/>
+            <div>
+              <p className={`text-[#CCFF00] text-4xl lg:text-[55px] font-bold ${afacad.className}`}>
+                Graphic
+              </p>
+              <p className={`text-black text-4xl lg:text-[55px] font-bold ${afacad.className}`}>
+                Design
+              </p>
+              <p className="text-black text-[16px] font-semibold mt-1">
+                “Design is intelligence made visible.”
+              </p>
+              <FaArrowCircleRight className="fill-black text-xl mt-2 hover:drop-shadow-lg float-right" />
             </div>
           </div>
 
-          {/* Web Design */}
-          <div className="w-[530px] rounded-xl block bg-[#8000FF] p-4">
-            <p
-              className={`text-[#CCFF00] text-[36px] font-bold ${afacad.className}`}
-            >
-              Web Design & Development
-            </p>
-            <img
-              src="32-pc.png"
-              alt="PC Site"
-              className="cursor-pointer "
-              onClick={() => setFullscreenImage("32-pc.png")}
-            />
+          {/* Art Works & Mobile UI */}
+          <div className="flex flex-col sm:flex-row gap-4 sm:mr-0 mr-12">
+            <div className="bg-[#0198FC] p-4 rounded-xl w-full sm:w-1/2">
+              <p className={`text-black text-3xl lg:text-6xl font-bold ${afacad.className}`}>
+                Art Works
+              </p>
+             
               <img
-              src="32-pc.png"
-              alt="PC Site"
-              className="cursor-pointer mt-4 "
-              onClick={() => setFullscreenImage("32-pc.png")}
-            />
-            {/* <img
-              src="nike-site.png"
-              alt="Nike Site"
-              className="mt-4 cursor-pointer "
-              onClick={() => setFullscreenImage("nike-site.png")}
-            /> */}
-            <FaArrowCircleRight className="fill-black mt-2 text-[20px] place-self-end hover:drop-shadow-lg float-right" />
+                src="art1.jpg"
+                alt="Artwork"
+                className="mt-2 rounded-md border-2 border-[#FCBC04] cursor-pointer w-full"
+                onClick={() => setFullscreenImage("art1.jpg")}
+              />
+               <FaArrowCircleRight className="fill-black text-xl mt-2 float-right hover:drop-shadow-lg" />
+            </div>
+            <div className="bg-[#FCBC04] p-4 rounded-xl w-full sm:w-1/2">
+              <p className={`text-black text-3xl lg:text-6xl font-bold ${afacad.className}`}>
+                Mobile UI Design
+              </p>
+             
+              <img
+                src="32mobile.png"
+                alt="Mobile UI"
+                className="mt-2 rounded-md cursor-pointer w-full"
+                onClick={() => setFullscreenImage("32mobile.png")}
+              /> 
+              <FaArrowCircleRight className="fill-black text-xl mt-2 float-right hover:drop-shadow-lg" />
+            </div>
           </div>
         </div>
+
+        {/* Web Design */}
+        <div className="sm:w-full  w-[330px]  bg-[#8000FF] sm:mr-0  mr-20 p-4 rounded-xl">
+          <p className={`text-[#CCFF00] text-2xl lg:text-[36px] font-bold ${afacad.className}`}>
+            Web Design & Development
+          </p>
+          <img
+            src="32-pc.png"
+            alt="PC Site"
+            className="mt-4 cursor-pointer w-[310px]  sm:w-full"
+            onClick={() => setFullscreenImage("32-pc.png")}
+          />
+          <img
+            src="32-pc.png"
+            alt="PC Site"
+            className="mt-4 cursor-pointer w-[310px]  sm:w-full"
+            onClick={() => setFullscreenImage("32-pc.png")}
+          />
+          <FaArrowCircleRight className="fill-black text-xl mt-2 hover:drop-shadow-lg float-right" />
+        </div>
       </div>
+
+      {/* Workman Image */}
+      <img
+        src="workman.png"
+        alt="workman"
+        className="hidden lg:block h-[500px] absolute bottom-0 left-4"
+      />
     </div>
   );
 }
