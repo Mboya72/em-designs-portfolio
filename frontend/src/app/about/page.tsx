@@ -35,7 +35,7 @@ export default function About() {
             I am a multifaceted creator with a deep passion for both the technical and artistic
             sides of design. As a software developer, web designer, graphic designer, motion
             designer, and traditional artist, I bring a unique blend of creativity and functionality
-            to everything I do. Whether it's crafting seamless user experiences, creating stunning
+            to everything I do. Whether it&apos;s crafting seamless user experiences, creating stunning
             visuals, or building dynamic websites, I focus on delivering high-quality work that
             connects with people. I strive to continuously push the boundaries of creativity,
             blending technology and art to create truly engaging experiences.

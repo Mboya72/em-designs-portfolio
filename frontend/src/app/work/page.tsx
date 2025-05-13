@@ -21,7 +21,7 @@ export default function WorksPage() {
           className="fixed inset-0 z-50 bg-black bg-opacity-90 flex items-center justify-center"
           onClick={() => setFullscreenImage(null)}
         >
-          <img
+          <Image
             src={fullscreenImage}
             alt="fullscreen view"
             width={100}
