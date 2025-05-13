@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import Image from "next/image";
 import React from "react";
 
 
@@ -16,10 +17,10 @@ const Contact = () => {
             <h1 className={`${bubbleboddyNeue.className} text-9xl`}>TOUCH </h1>
           </div>
           <div>
-            <img src="in touch.png" alt="" className="h-[210px] mt-6 ml-5" />
+          <Image src="/in touch.png" alt="In Touch" width={210} height={210} className="mt-6 ml-5" />
           </div>
           <div className="w-[300px] h-[300px] ml-20  border bg-[#1B1B1B] border-[#656B76]">
-            <img src="location.png" alt="" className="h-[50px] mt-4 ml-4"/>
+          <Image src="/location.png" alt="Location" width={50} height={50} className="mt-4 ml-4" />
             <h2 className="ml-4 mt-2 font-medium text-xl text-[#AFDB00]">My Location</h2>
             <h3 className="ml-4 mt-1">Nairobi, Kenya</h3>
             <div className="mt-30 ml-4">
@@ -27,7 +28,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="w-[300px] h-[300px] ml-7 border bg-[#1B1B1B] border-[#656B76]">
-            <img src="worktime.png" alt="" className="h-[50px] mt-4 ml-4"/>
+          <Image src="/worktime.png" alt="Work Time" width={50} height={50} className="mt-4 ml-4" />
             <h2 className="ml-4 mt-2 font-medium text-xl text-[#AFDB00]">Working Time</h2>
             <h3 className="ml-4 mt-1">Flexible Work Time</h3>
             <div className="mt-30 ml-4">
@@ -35,7 +36,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="w-[300px] h-[300px] ml-7 border bg-[#1B1B1B] border-[#656B76]">
-            <img src="communication.png" alt="" className="h-[50px] mt-4 ml-4" />
+          <Image src="/communication.png" alt="Communication" width={50} height={50} className="mt-4 ml-4" />
             <h2 className="ml-4 mt-2 font-medium text-xl text-[#AFDB00]">Communication</h2>
             <h3 className="ml-4 mt-1">+254 727 168 320</h3>
             <h3 className="ml-4 mt-1">elvindio72@gmail.com</h3>
@@ -50,7 +51,7 @@ const Contact = () => {
             <h1 className={`${bubbleboddyNeue.className} text-9xl`}>ME</h1>
           </div>
           <div>
-            <img src="contact.png" alt="" className="h-[210px]" />
+          <Image src="/contact.png" alt="Contact" width={210} height={210} className="h-[210px]" />
           </div>
           <div className="flex bg-[#1B1B1B] ml-36 border border-[#3E4042] w-[955px] h-[300px]">
             <div className="w-[450px] h-[300px] ml-4 mt-4">
@@ -73,9 +74,9 @@ const Contact = () => {
             </div>
             <div className="flex w-[500px] h-[300px] ml-10 ">
             <p className="mt-60 font-extrabold text-xl text-red-400">Any Questions?</p>
-              <img src="questionman.png" alt="" className="h-[210px] mt-15 " />
+            <Image src="/questionman.png" alt="Question Man" width={210} height={210} className="mt-15" />
             <p className="mt-60 font-extrabold text-xl text-yellow-300">Get in Touch</p>
-              <img src="pointing worker.png" alt="" className="h-[210px] mt-15"/>
+            <Image src="/pointing worker.png" alt="Pointing Worker" width={210} height={210} className="h-[210px] mt-15" />
             </div>
           </div>
         </div>
