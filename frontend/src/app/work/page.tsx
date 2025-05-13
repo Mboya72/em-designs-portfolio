@@ -24,6 +24,8 @@ export default function WorksPage() {
           <img
             src={fullscreenImage}
             alt="fullscreen view"
+            width={100}
+            height={100}
             className="max-w-full max-h- rounded-lg"
           />
         </div>
@@ -34,7 +36,13 @@ export default function WorksPage() {
         <h1 className={`text-5xl lg:text-9xl ${afacad.className}`}>
           My <span className="text-[#CCFF00]">Works</span>
         </h1>
-        <img src="brick.png" alt="brick" className="h-[100px] lg:h-[100px]" />
+        <Image
+  src="/brick.png"
+  alt="brick"
+  width={100}
+  height={100}
+  className="h-[100px] lg:h-[100px]"
+/>
       </div>
 
       {/* Content Sections */}
@@ -177,11 +185,13 @@ export default function WorksPage() {
       </div>
 
       {/* Workman Image */}
-      <img
-        src="workman.png"
-        alt="workman"
-        className="hidden lg:block h-[500px] absolute bottom-0 left-4"
-      />
+      <Image
+  src="/workman.png"
+  alt="workman"
+  width={200} // adjust to match your design
+  height={500}
+  className="hidden lg:block h-[500px] absolute bottom-0 left-4"
+/>
     </div>
   );
 }
