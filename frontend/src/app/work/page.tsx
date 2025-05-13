@@ -2,6 +2,8 @@
 import { useState } from "react";
 import { Afacad } from "next/font/google";
 import { FaArrowCircleRight } from "react-icons/fa";
+import Link from "next/link";
+import Image from "next/image";
 
 const afacad = Afacad({
   subsets: ["latin"],
@@ -39,7 +41,9 @@ export default function WorksPage() {
       <div className="flex flex-col lg:flex-row gap-6">
         {/* Motion Design */}
         <div className="sm:w-full  w-[330px] bg-[#CCFF00] rounded-xl sm:mr-0 mr-12 sm:p-4 flex flex-col items-center gap-4">
-          <p className={`text-black text-4xl lg:text-6xl font-bold ${afacad.className}`}>
+          <p
+            className={`text-black text-4xl lg:text-6xl font-bold ${afacad.className}`}
+          >
             Motion Design
           </p>
           <video
@@ -63,6 +67,7 @@ export default function WorksPage() {
           <p className="text-black text-[16px] text-center font-semibold">
             "Motion design is where storytelling and technology meet."
           </p>
+          <Link href={"/motiondesign"}></Link>{" "}
           <FaArrowCircleRight className="fill-black text-xl mr-2 mb-2 hover:drop-shadow-lg self-end" />
         </div>
 
@@ -70,75 +75,104 @@ export default function WorksPage() {
         <div className="w-full lg:w-[530px] flex flex-col gap-6">
           {/* Graphic Design Card */}
           <div className="bg-[#CC5144] p-4 rounded-xl flex flex-col sm:flex-row sm:mr-0 mr-12 gap-4">
-          <img
-  src="Emma.png"
-  alt="Emma"
-  className="w-full max-w[300] sm:max-w-[180px] h-auto rounded-md border border-slate-700 shadow-lg cursor-pointer"
-  onClick={() => setFullscreenImage("Emma.png")}
-/>
+            <Image
+              src="/Emma.png"
+              alt="Emma"
+              width={180}
+              height={180}
+              className="w-[280px] sm:w-[180px] h-auto rounded-md border border-slate-700 shadow-lg cursor-pointer"
+              onClick={() => setFullscreenImage("Emma.png")}
+            />
             <div>
-              <p className={`text-[#CCFF00] text-4xl lg:text-[55px] font-bold ${afacad.className}`}>
+              <p
+                className={`text-[#CCFF00] text-4xl lg:text-[55px] font-bold ${afacad.className}`}
+              >
                 Graphic
               </p>
-              <p className={`text-black text-4xl lg:text-[55px] font-bold ${afacad.className}`}>
+              <p
+                className={`text-black text-4xl lg:text-[55px] font-bold ${afacad.className}`}
+              >
                 Design
               </p>
               <p className="text-black text-[16px] font-semibold mt-1">
                 “Design is intelligence made visible.”
               </p>
-              <FaArrowCircleRight className="fill-black text-xl mt-2 hover:drop-shadow-lg float-right" />
+              <Link href={"/graphicdesign"}>
+                <FaArrowCircleRight className="fill-black text-xl mt-2 hover:drop-shadow-lg float-right" />
+              </Link>
             </div>
           </div>
 
           {/* Art Works & Mobile UI */}
           <div className="flex flex-col sm:flex-row gap-4 sm:mr-0 mr-12">
             <div className="bg-[#0198FC] p-4 rounded-xl w-full sm:w-1/2">
-              <p className={`text-black text-3xl lg:text-6xl font-bold ${afacad.className}`}>
+              <p
+                className={`text-black text-3xl lg:text-6xl font-bold ${afacad.className}`}
+              >
                 Art Works
               </p>
-             
-              <img
-                src="art1.jpg"
+
+              <Image
+                src="/art1.jpg"
                 alt="Artwork"
-                className="mt-2 rounded-md border-2 border-[#FCBC04] cursor-pointer w-full"
+                width={300}
+                height={200}
+                className="mt-2 rounded-md border-2 border-[#FCBC04] cursor-pointer w-full h-auto"
                 onClick={() => setFullscreenImage("art1.jpg")}
               />
-               <FaArrowCircleRight className="fill-black text-xl mt-2 float-right hover:drop-shadow-lg" />
+              <Link href={"/arts"}>
+                <FaArrowCircleRight className="fill-black text-xl mt-2 float-right hover:drop-shadow-lg" />
+              </Link>
             </div>
             <div className="bg-[#FCBC04] p-4 rounded-xl w-full sm:w-1/2">
-              <p className={`text-black text-3xl lg:text-6xl font-bold ${afacad.className}`}>
+              <p
+                className={`text-black text-3xl lg:text-6xl font-bold ${afacad.className}`}
+              >
                 Mobile UI Design
               </p>
-             
-              <img
-                src="32mobile.png"
+
+              <Image
+                src="/32mobile.png"
                 alt="Mobile UI"
-                className="mt-2 rounded-md cursor-pointer w-full"
+                width={300}
+                height={200}
+                className="mt-2 rounded-md cursor-pointer w-full h-auto"
                 onClick={() => setFullscreenImage("32mobile.png")}
-              /> 
-              <FaArrowCircleRight className="fill-black text-xl mt-2 float-right hover:drop-shadow-lg" />
+              />
+              <Link href={"/mobiledesign"}>
+                {" "}
+                <FaArrowCircleRight className="fill-black text-xl mt-2 float-right hover:drop-shadow-lg" />
+              </Link>
             </div>
           </div>
         </div>
 
         {/* Web Design */}
         <div className="sm:w-full  w-[330px]  bg-[#8000FF] sm:mr-0  mr-20 p-4 rounded-xl">
-          <p className={`text-[#CCFF00] text-2xl lg:text-[36px] font-bold ${afacad.className}`}>
+          <p
+            className={`text-[#CCFF00] text-2xl lg:text-[36px] font-bold ${afacad.className}`}
+          >
             Web Design & Development
           </p>
-          <img
-            src="32-pc.png"
+          <Image
+            src="/32-pc.png"
             alt="PC Site"
-            className="mt-4 cursor-pointer w-[310px]  sm:w-full"
+            width={400}
+            height={250}
+            className="mt-4 cursor-pointer w-[310px] sm:w-full h-auto"
             onClick={() => setFullscreenImage("32-pc.png")}
           />
-          <img
-            src="32-pc.png"
+          <Image
+            src="/32-pc.png"
             alt="PC Site"
-            className="mt-4 cursor-pointer w-[310px]  sm:w-full"
+            width={400}
+            height={250}
+            className="mt-4 cursor-pointer w-[310px] sm:w-full h-auto"
             onClick={() => setFullscreenImage("32-pc.png")}
           />
-          <FaArrowCircleRight className="fill-black text-xl mt-2 hover:drop-shadow-lg float-right" />
+          <Link href={"/Webdesign"}>
+            <FaArrowCircleRight className="fill-black text-xl mt-2 hover:drop-shadow-lg float-right" />
+          </Link>
         </div>
       </div>
 
