@@ -25,7 +25,7 @@ export default function Home() {
         </div>
 
         <div>
-          <img src="/boy.png" alt="Boy Illustration" className="absolute bottom-0 h-[90vh] hidden lg:block" />
+          <Image src="/boy.png" alt="Boy Illustration" className="absolute bottom-0 h-[90vh] hidden lg:block" />
         </div>
       </div>
     </div>

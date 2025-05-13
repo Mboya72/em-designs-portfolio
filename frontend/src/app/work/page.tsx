@@ -65,7 +65,7 @@ export default function WorksPage() {
             className="rounded-lg sm:w-full w-[300px] max-w-[400px]"
           />
           <p className="text-black text-[16px] text-center font-semibold">
-            "Motion design is where storytelling and technology meet."
+          &quot;Motion design is where storytelling and technology meet.&quot;
           </p>
           <Link href={"/motiondesign"}></Link>{" "}
           <FaArrowCircleRight className="fill-black text-xl mr-2 mb-2 hover:drop-shadow-lg self-end" />
@@ -95,7 +95,7 @@ export default function WorksPage() {
                 Design
               </p>
               <p className="text-black text-[16px] font-semibold mt-1">
-                “Design is intelligence made visible.”
+              &quot;Design is intelligence made visible.&quot;
               </p>
               <Link href={"/graphicdesign"}>
                 <FaArrowCircleRight className="fill-black text-xl mt-2 hover:drop-shadow-lg float-right" />
