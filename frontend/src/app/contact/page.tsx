@@ -15,10 +15,7 @@ const Contact = () => {
     type: "success" | "error";
   } | null>(null);
 
-  async function handleSubmit(e: {
-    preventDefault: () => void;
-    currentTarget: any;
-  }) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const formData = new FormData(form);
