@@ -16,10 +16,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   try {
     const data = await resend.emails.send({
-      from: 'Elvis Mboya <onboarding@resend.dev>', // Must be verified
+      from: 'Elvis Mboya <onboarding@resend.dev>',
       to: ['elvismboyadesigns@gmail.com'],
       subject: `New message from ${name}`,
-      reply_to: email,
+      replyTo: email,
       text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
     });
 
