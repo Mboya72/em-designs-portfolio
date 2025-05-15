@@ -1,7 +1,6 @@
 "use client";
 import localFont from "next/font/local";
 import React, { useState } from "react";
-import { sendEmail } from "../../../lib/resend";
 import Image from "next/image";
 
 const bubbleboddyNeue = localFont({
@@ -33,20 +32,24 @@ const Contact = () => {
       return;
     }
 
-    const res = await sendEmail({
-      to: "elvismboyadesigns@gmail.com",
-      subject: `New message from ${name}`,
-      name,
-      email,
-      message,
-    });
+    try {
+      const res = await fetch("/api/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
 
-    if (res.success) {
-      setAlert({ message: "Message sent successfully!", type: "success" });
-      form.reset();
-    } else {
+      const data = await res.json();
+
+      if (data.success) {
+        setAlert({ message: "Message sent successfully!", type: "success" });
+        form.reset();
+      } else {
+        throw new Error(data.error || "Failed to send message");
+      }
+    } catch (error) {
       setAlert({ message: "Failed to send message.", type: "error" });
-      console.error(res.error);
+      console.error("Email error:", error);
     }
 
     setTimeout(() => setAlert(null), 4000);
