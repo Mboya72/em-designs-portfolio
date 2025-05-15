@@ -4,7 +4,9 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ success: false, error: 'Method not allowed' });
+  if (req.method !== 'POST') {
+    return res.status(405).json({ success: false, error: 'Method not allowed' });
+  }
 
   const { name, email, message } = req.body;
 
@@ -14,10 +16,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   try {
     const data = await resend.emails.send({
-      from: 'Elvis Mboya <onboarding@resend.dev>', // Must be verified in Resend
+      from: 'Elvis Mboya <onboarding@resend.dev>', // Must be verified
       to: ['elvismboyadesigns@gmail.com'],
       subject: `New message from ${name}`,
-      replyTo: email,
+      reply_to: email,
       text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
     });
 
