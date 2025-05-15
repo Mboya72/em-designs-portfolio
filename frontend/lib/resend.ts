@@ -1,31 +1,36 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+// lib/resend.ts
+"use server";
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ success: false, error: 'Method not allowed' });
-  }
-
-  const { name, email, message } = req.body;
-
-  if (!name || !email || !message) {
-    return res.status(400).json({ success: false, error: 'Missing required fields' });
-  }
-
+export const sendEmail = async ({
+  to,
+  subject,
+  name,
+  email,
+  message,
+}: {
+  to: string;
+  subject: string;
+  name: string;
+  email: string;
+  message: string;
+}) => {
   try {
     const data = await resend.emails.send({
-      from: 'Elvis Mboya <onboarding@resend.dev>',
-      to: ['elvismboyadesigns@gmail.com'],
-      subject: `New message from ${name}`,
-      replyTo: email,
-      text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
+      from: 'EMDesigns <onboarding@resend.dev>',
+      to,
+      subject,
+      html: `
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Message:</strong><br/>${message}</p>
+      `,
     });
 
-    return res.status(200).json({ success: true, data });
+    return { success: true, data };
   } catch (error) {
-    console.error('Resend error:', error);
-    return res.status(500).json({ success: false, error: 'Failed to send email' });
+    return { success: false, error };
   }
-}
+};

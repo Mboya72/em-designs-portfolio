@@ -1,6 +1,7 @@
 "use client";
 import localFont from "next/font/local";
 import React, { useState } from "react";
+import { sendEmail } from "../../../lib/resend";
 import Image from "next/image";
 
 const bubbleboddyNeue = localFont({
@@ -9,12 +10,9 @@ const bubbleboddyNeue = localFont({
 });
 
 const Contact = () => {
-  const [alert, setAlert] = useState<{
-    message: string;
-    type: "success" | "error";
-  } | null>(null);
+  const [alert, setAlert] = useState<{ message: string; type: "success" | "error" } | null>(null);
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: { preventDefault: () => void; currentTarget: any; }) {
     e.preventDefault();
     const form = e.currentTarget;
     const formData = new FormData(form);
@@ -23,36 +21,28 @@ const Contact = () => {
     const email = formData.get("email");
     const message = formData.get("message");
 
-    if (
-      typeof name !== "string" ||
-      typeof email !== "string" ||
-      typeof message !== "string"
-    ) {
+    if (typeof name !== "string" || typeof email !== "string" || typeof message !== "string") {
       setAlert({ message: "Invalid input", type: "error" });
       return;
     }
 
-    try {
-      const res = await fetch("/api/send", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message }),
-      });
+    const res = await sendEmail({
+      to: "elvismboyadesigns@gmail.com",
+      subject: `New message from ${name}`,
+      name,
+      email,
+      message,
+    });
 
-      const data = await res.json();
-
-      if (data.success) {
-        setAlert({ message: "Message sent successfully!", type: "success" });
-        form.reset();
-      } else {
-        throw new Error(data.error || "Failed to send message");
-      }
-    } catch (error) {
+    if (res.success) {
+      setAlert({ message: "Message sent successfully!", type: "success" });
+      form.reset();
+    } else {
       setAlert({ message: "Failed to send message.", type: "error" });
-      console.error("Email error:", error);
+      console.error(res.error);
     }
 
-    setTimeout(() => setAlert(null), 4000);
+    setTimeout(() => setAlert(null), 4000); 
   }
 
   return (
