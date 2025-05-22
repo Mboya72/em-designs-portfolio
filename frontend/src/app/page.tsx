@@ -1,6 +1,5 @@
-
 import Image from 'next/image';
-import React from 'react'
+import React from 'react';
 
 export default function Home() {
   return (
@@ -18,19 +17,53 @@ export default function Home() {
             Download Resume
           </button>
           <div className="mt-6 flex">
-            <Image src="/instagram.png" alt="Instagram" className="w-8 hover:scale-110 mr-6 cursor-pointer" />
-            <Image src="/linkedin.png" alt="LinkedIn" className="w-8 hover:scale-110 mr-6 cursor-pointer" />
-            <Image src="/whatsapp.png" alt="WhatsApp" className="w-8 hover:scale-110 cursor-pointer" />
+  <a href="https://instagram.com/your_username" target="_blank" rel="noopener noreferrer">
+  <Image
+    src="/instagram.png"
+    alt="Instagram"
+    width={32}
+    height={32}
+    className="w-8 hover:scale-110 mr-6 cursor-pointer"
+  />
+</a>
+
+<a href="https://linkedin.com/in/elvis-mboya" target="_blank" rel="noopener noreferrer">
+  <Image
+    src="/linkedin.png"
+    alt="LinkedIn"
+    width={32}
+    height={32}
+    className="w-8 hover:scale-110 mr-6 cursor-pointer"
+  />
+</a>
+
+<a href="https://wa.me/254741782335" target="_blank" rel="noopener noreferrer">
+  <Image
+    src="/whatsapp.png"
+    alt="WhatsApp"
+    width={32}
+    height={32}
+    className="w-8 hover:scale-110 cursor-pointer"
+  />
+</a>
+
           </div>
         </div>
 
         <div>
-          <Image src="/boy.png" alt="Boy Illustration" className="absolute bottom-0 h-[90vh] hidden lg:block" />
+          <Image
+            src="/boy.png"
+            alt="Boy Illustration"
+            width={600} 
+            height={800} 
+            className="absolute bottom-0 h-[90vh] hidden lg:block"
+          />
         </div>
       </div>
     </div>
   );
 }
+
 
 
 
