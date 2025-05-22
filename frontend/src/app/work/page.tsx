@@ -16,20 +16,18 @@ export default function WorksPage() {
   return (
     <div className="min-h-screen bg-[url(/aboutback.png)] bg-cover bg-no-repeat px-4 lg:px-[13vw] pb-12 pt-12 lg:pt-20">
       {/* Fullscreen Image Modal */}
-      {fullscreenImage && (
-        <div
-          className="fixed inset-0 z-50 bg-black bg-opacity-90 flex items-center justify-center"
-          onClick={() => setFullscreenImage(null)}
-        >
-          <Image
-            src={fullscreenImage}
-            alt="fullscreen view"
-            width={100}
-            height={100}
-            className="max-w-full max-h- rounded-lg"
-          />
-        </div>
-      )}
+{fullscreenImage && (
+  <div
+    className="fixed inset-0 z-50 bg-black bg-opacity-90 flex items-center justify-center"
+    onClick={() => setFullscreenImage(null)}
+  >
+    <img
+      src={`/${fullscreenImage}`}
+      alt="fullscreen view"
+      className="max-w-full max-h-full rounded-lg"
+    />
+  </div>
+)}
 
       {/* Header */}
       <div className="flex flex-col lg:flex-row items-center mb-10 gap-4">
