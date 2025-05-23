@@ -28,7 +28,7 @@ export default function Home() {
           </button>
           <div className="mt-6 flex">
             <a
-              href="https://instagram.com/your_username"
+              href="https://instagram.com/elvindio72_arts"
               target="_blank"
               rel="noopener noreferrer"
             >
