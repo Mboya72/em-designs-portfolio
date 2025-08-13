@@ -168,14 +168,15 @@ export default function WorksPage() {
             className="mt-4 cursor-pointer w-[310px] sm:w-full h-auto"
             onClick={() => setFullscreenImage("32-pc.png")}
           />
-          <Image
-            src="/32-pc.png"
-            alt="PC Site"
-            width={400}
-            height={250}
-            className="mt-4 cursor-pointer w-[310px] sm:w-full h-auto"
-            onClick={() => setFullscreenImage("32-pc.png")}
-          />
+          <a href="https://repotor.vercel.app/" target="_blank" rel="noopener noreferrer">
+  <Image
+    src="/repotor.png"
+    alt="PC Site"
+    width={400}
+    height={250}
+    className="mt-4 cursor-pointer w-[310px] sm:w-full h-auto"
+  />
+</a>
           <Link href={"/Webdesign"}>
             <FaArrowCircleRight className="fill-black text-xl mt-2 hover:drop-shadow-lg float-right" />
           </Link>
