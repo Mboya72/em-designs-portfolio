@@ -15,8 +15,14 @@ export default function About() {
         <div className="w-full lg:w-[75vw]">
           {/* Header Section */}
           <div className="flex flex-row lg:flex-row items-center lg:items-start sm:gap-6 gap-1">
-            <Image src="/aboutanime.png" alt="John" className="h-[250px] lg:h-[400px]" />
-            <div>
+  <Image
+    src="/aboutanime.png"
+    alt="John"
+    width={300}       // required
+    height={250}      // required
+    className="lg:h-[400px] w-auto"
+  />
+  <div>
               <h1
                 className={`text-[75px] sm:text-[120px] lg:text-[200px] text-gray-400 leading-none ${afacad.className}`}
               >
@@ -44,12 +50,19 @@ export default function About() {
           {/* Skills Section */}
           <h2 className="text-[#ccff00] text-2xl sm:text-3xl mt-6 font-semibold">Skills</h2>
           <div className="flex flex-wrap gap-3 mt-3 mr-7">
-            {[
-              "pr", "ps", "ai", "figma", "react", "js", "next", "css", "tailwind", "ae", "id", "xd", "postgre",
-            ].map((icon, i) => (
-              <Image key={i} src={`/${icon}.png`} alt={icon} className="h-10 sm:h-11" />
-            ))}
-          </div>
+  {[
+    "pr", "ps", "ai", "figma", "react", "js", "next", "css", "tailwind", "ae", "id", "xd", "postgre",
+  ].map((icon, i) => (
+    <Image
+      key={i}
+      src={`/${icon}.png`}
+      alt={icon}
+      width={40}        // REQUIRED
+      height={40}       // REQUIRED
+      className="sm:w-11 sm:h-11 object-contain"
+    />
+  ))}
+</div>
 
           {/* Fun Fact Section */}
           <h2 className="text-[#ccff00] text-2xl sm:text-3xl mt-6 font-semibold">Fun Fact</h2>
