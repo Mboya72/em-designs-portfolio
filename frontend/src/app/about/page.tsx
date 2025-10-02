@@ -71,7 +71,7 @@ export default function About() {
             expressive power of traditional art. Coding is my language, but the canvas is where I
             tell stories.
           </p>
-          <p className="text-[#CCFF00] mb-8 mt-3 text-[18px] mr-12 sm:text-[20px] lg:text-[22px] italic">
+          <p className="text-[#CCFF00]  mb-8 mt-3 text-[18px] mr-12 sm:text-[20px] lg:text-[22px] italic">
           &quot;Creativity is intelligence having fun.&quot; — Albert Einstein
           </p>
         </div>

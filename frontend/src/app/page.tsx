@@ -23,9 +23,13 @@ export default function Home() {
           <p className="bg-[#F7FBE6] px-2 mt-3 text-xl font-semibold text-black rounded-full w-64 cursor-pointer">
             Paint & Pencil Artist
           </p>
-          <button className="bg-[#CCFF00] mt-[30px] hover:bg-[#20479b] hover:text-slate-300 text-[17px] text-black font-bold py-1 px-2 rounded-md">
-            Download Resume
-          </button>
+          <a 
+  href="/Elvis Mboya Resume 2025.pdf" 
+  download="My_Resume.pdf"
+  className="bg-[#CCFF00] mt-[30px] hover:bg-[#20479b] hover:text-slate-300 text-[17px] text-black font-bold py-1 px-2 rounded-md inline-block text-center"
+>
+  Download Resume
+</a>
           <div className="mt-6 flex">
             <a
               href="https://instagram.com/elvindio72_arts"
